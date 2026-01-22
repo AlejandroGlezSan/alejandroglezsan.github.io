@@ -45,6 +45,11 @@
                         <a class="nav-link" href="#experiencia">Experiencia</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#musica">
+                            <i class="fas fa-music me-1"></i>Música
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#proyectos">Proyectos</a>
                     </li>
                     <li class="nav-item">
@@ -402,6 +407,77 @@
                 <a href="https://github.com/AlejandroGlezSan" target="_blank" class="btn btn-primary btn-lg">
                     <i class="fab fa-github me-2"></i>Ver más proyectos en GitHub
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Música -->
+    <section id="musica" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Mi Playlist</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="music-player card shadow-lg">
+                        <div class="card-body">
+                            <!-- Portada del álbum -->
+                            <div class="album-art text-center mb-4">
+                                <img id="albumCover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                    alt="Portada del álbum" class="img-fluid rounded">
+                                <div class="mt-3">
+                                    <h3 id="songTitle" class="h4">Canción 1</h3>
+                                    <p id="artistName" class="text-muted mb-0">Artista Desconocido</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Barra de progreso -->
+                            <div class="progress-container mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span id="currentTime">0:00</span>
+                                    <span id="totalTime">0:00</span>
+                                </div>
+                                <div class="progress" style="height: 6px;">
+                                    <div id="progressBar" class="progress-bar bg-primary" role="progressbar" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Controles principales -->
+                            <div class="player-controls text-center mb-4">
+                                <button id="prevBtn" class="btn btn-outline-primary btn-circle">
+                                    <i class="fas fa-step-backward"></i>
+                                </button>
+                                <button id="playBtn" class="btn btn-primary btn-circle mx-3">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button id="nextBtn" class="btn btn-outline-primary btn-circle">
+                                    <i class="fas fa-step-forward"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Controles adicionales -->
+                            <div class="additional-controls d-flex justify-content-between align-items-center">
+                                <div class="volume-control d-flex align-items-center">
+                                    <i class="fas fa-volume-down me-2"></i>
+                                    <input type="range" id="volumeSlider" class="form-range" min="0" max="1" step="0.1" value="0.5">
+                                </div>
+                                <button id="shuffleBtn" class="btn btn-outline-secondary btn-sm">
+                                    <i class="fas fa-random"></i>
+                                </button>
+                                <button id="repeatBtn" class="btn btn-outline-secondary btn-sm">
+                                    <i class="fas fa-redo"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Lista de canciones -->
+                            <div class="playlist mt-4">
+                                <h5 class="mb-3">Playlist (5 canciones)</h5>
+                                <ul id="playlist" class="list-group">
+                                    <!-- Las canciones se cargarán dinámicamente -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

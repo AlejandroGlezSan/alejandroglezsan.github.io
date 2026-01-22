@@ -339,3 +339,129 @@ h1, h2, h3, h4, h5, h6 {
 .fade-in-up {
     animation: fadeInUp 0.6s ease forwards;
 }
+
+/* ===== ESTILOS DEL REPRODUCTOR DE MÚSICA ===== */
+
+/* Estilos generales del reproductor */
+.music-player {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.album-art img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.album-art img:hover {
+    transform: scale(1.03);
+}
+
+/* Botones circulares */
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.btn-circle.btn-primary {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+
+/* Barra de progreso */
+.progress-container {
+    cursor: pointer;
+}
+
+.progress {
+    cursor: pointer;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    transition: width 0.1s linear;
+}
+
+/* Lista de reproducción */
+.playlist .list-group-item {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.playlist .list-group-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.playlist .list-group-item.active {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--primary-color);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.playlist .song-duration {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Controles de volumen */
+.volume-control {
+    width: 150px;
+}
+
+.volume-control .form-range {
+    width: 100px;
+}
+
+/* Estados de botones */
+.btn-outline-secondary.active {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+/* Animación para la portada cuando está reproduciendo */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.playing .album-art img {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .album-art img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .btn-circle {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .btn-circle.btn-primary {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .volume-control {
+        width: 120px;
+    }
+}

@@ -30,3 +30,16 @@ Portfolio web profesional desarrollado para mostrar habilidades, experiencia y p
   - GitHub Pages (gratuito)
 
 ## 📁 Estructura del proyecto
+portfolio-alejandro/
+│
+├── index.html # Página principal
+├── style.css # Estilos personalizados
+├── script.js # Funcionalidades JavaScript
+├── README.md # Este archivo
+│
+├── assets/ # Recursos multimedia
+│ ├── images/ # Imágenes (crear esta carpeta)
+│ ├── icons/ # Iconos personalizados
+│ └── cv_alejandro.pdf # CV descargable
+│
+└── .gitignore # Archivos a ignorar por Git
